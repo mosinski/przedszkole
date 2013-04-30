@@ -1,0 +1,12 @@
+@font-face {
+	font: {
+       	family: 'Sunshine_Poppy';
+       	weight: 'normal';
+       	style: 'normal';
+    	}
+	src: asset-url('Sunshine_Poppy.eot', font);
+	src: asset-url('Sunshine_Poppy.eot', font) format('embedded-opentype'), 
+	asset-url('Sunshine_Poppy.woff', font) format('woff'), 
+	asset-url('Sunshine_Poppy.ttf', font) format('truetype'), 
+	asset-url('Sunshine_Poppy.svg#Sunshine_Poppy', font) format('svg');
+}

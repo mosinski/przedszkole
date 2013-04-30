@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Przedszkole</title>
+  <script type="text/javascript" src="/javascripts/jquery-1.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery00.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery01.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery02.js"></script>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+<script type="text/javascript">
+$(window).load(function() {
+$('#slider').nivoSlider();
+});
+</script>
+<script type="text/javascript">
+$(function() { $('.lightbox').lightBox(); });
+</script>
+</head>
+<body>
+<div id="bg_top">
+  <div id="wrapper">
+    <div id="header">
+      <div id="logo"><%= image_tag("logo0000.png", :width=>"289", :height=>"54") %></div>
+      <div id="cloud1" class="special_font">Otwarte<br />
+        7 Dni</div>
+      <div id="cloud2" class="special_font">1300 555 555</div>
+      <div id="menu">
+        <ul id="navigation">
+          <li><%= link_to "start", "/", :class=>"active" %></li>
+          <li><%= link_to "grupy dzieci", "/grupy" %>
+            <ul class="second-level">
+              <li> <a href="#">Biedronki</a></li>
+              <li> <a href="#">Rybki</a></li>
+              <li> <a href="#">Misie</a></li>
+              <li> <a href="#">itp.</a></li>
+            </ul>
+          </li>
+          <li><a href="full-page.html">Aktualności</a></li>
+          <li><a href="boxes.html">Blog</a></li>
+          <li><a href="boxes.html">Boxes</a></li>
+          <li><a href="boxes.html">Site Map</a> </li>
+          <li><a href="contact.html" style="border:none;">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_bg">
+<%= yield %>
+    </div>
+    <div id="footer">
+      <div class="left">
+        <ul>
+          <!-- THIS IS FREE TEMPLATE! PLEASE KEEP COPYRIGHT LINK. THANK YOU FOR COOPERATION. ENJOY! -->
+          <li>Copyright &#169; <%= Time.now.year %></li>
+        </ul>
+      </div>
+      <div class="right">
+        <ul>
+	  <li><%= link_to 'Dodaj News', new_news_path %> | </li>
+          <li><a href="#">Logowanie</a> | </li>
+          <li><a href="#">Privacy</a> | </li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="grass">
+  <div id="footer_design"></div>
+</div>
+</body>
+</html>

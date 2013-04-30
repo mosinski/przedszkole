@@ -1,0 +1,45 @@
+<div id="content">
+        <div id="slider-wrapper">
+          <div id="slider" class="nivoSlider"> <a href="#"><%= image_tag("slide100.jpg", "title"=>"Zapewniamy idealne warunki") %></a> <a href="#"><%= image_tag("slide200.jpg", "title"=>"Dużo zabawy") %></a> <a href="#"><%= image_tag("slide3.jpg", "title"=>"i edukacji") %></a></div>
+        </div>
+        <div id="news_column">
+          <h1>Aktualności</h1>
+          <ul>
+<% @news.each do |news| %>
+            <li>
+              <div class="date"><span class="size24"><%= news.created_at.strftime("%d") %></span><br />
+                <span class="size18"><%= I18n.l news.created_at, :format => "%b" %></span> <%= news.created_at.strftime("%Y") %></div>
+              <div class="text"><strong><a href="#" class="title"><%= news.tytul %></a></strong><br />
+		<%= news.body[0..70] %></div>
+            </li>
+<% end %>
+          </ul>
+        </div>
+        <div class="right_column">
+          <div class="green_box_container" onclick="location.href='#';" style="cursor:pointer;">
+            <div class="image"><%= image_tag("icon_fam.png", :width=>"85", :height=>"114") %></div>
+            <div class="text">
+              <p class="title special_font"><a href="#">Enroll Here</a></p>
+              <p>Fill out the online form.</p>
+            </div>
+            <hr class="clear" />
+          </div>
+          <div class="blue_box_container" onclick="location.href='https://maps.google.pl/maps?q=Przedszkole&bav=on.2,or.r_cp.r_qf.&bvm=bv.45645796,d.ZWU&biw=1301&bih=647&um=1&ie=UTF-8&hl=pl&sa=N&tab=Tl';" style="cursor:pointer;">
+            <div class="image"><%= image_tag("icon_sig.png", :width=>"85", :height=>"114") %></div>
+            <div class="text">
+              <p class="title special_font"><a href="https://maps.google.pl/maps?q=Przedszkole&bav=on.2,or.r_cp.r_qf.&bvm=bv.45645796,d.ZWU&biw=1301&bih=647&um=1&ie=UTF-8&hl=pl&sa=N&tab=Tl">Znajdź nas</a></p>
+              <p>Mapa dojazdu do przedszkola</p>
+            </div>
+            <hr class="clear" />
+          </div>
+          <div id="welcome_text">
+            <h1>Witaj</h1>
+            <p style="font-size: 14px;"><%= image_tag("teddy000.jpg", :width=>"120", :height=>"113", "align"=>"right", :class=>"image_padding") %>Nasze Przedszkole jest miejscem, w którym dzieci czują się bezpiecznie i komfortowo, wspólna zabawa
+z dziećmi pozwoli im poznać smak przyjaźni i radości. Oferujemy dzieciom bogaty program dydaktyczny, rozszerzony o urozmaicone zajęcia dodatkowe.</p>
+            <p style="font-size: 14px;">U nas każde dziecko ma szansę rozwoju na miarę jego własnych możliwości. Pragniemy wychować dziecko
+z bogatą wyobraźnią, zdolne do wyrażania własnych uczuć i myśli, otwarte na pomysły oraz gotowe szukać nowych, lepszych rozwiązań.</p>
+          </div>
+          <br class="clear" />
+        </div>
+        <br class="clear" />
+      </div>
